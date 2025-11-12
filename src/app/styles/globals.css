@@ -22,6 +22,10 @@
   --color-secondary-600: #1a1a1a;
   --color-primary: #000000;
 
+  /* checkBox color */
+  --color-checked: #ff8700;
+  
+
   /* font bold */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
@@ -46,4 +50,5 @@
   --radius-lg: calc(1rem - 6px);
   --radius-md: calc(1rem - 8px);
   --radius-sm: calc(1rem - 10px);
+  --radius-xs: calc(1rem - 12px);
 }

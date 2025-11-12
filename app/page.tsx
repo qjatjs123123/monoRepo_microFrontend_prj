@@ -1,6 +1,6 @@
 import { Button } from "@/src/shared/ui/Button/Button";
+import CheckBox from "@/src/shared/ui/CheckBox/CheckBox";
 import { Text } from "@/src/shared/ui/Text/Text";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -8,6 +8,8 @@ export default function Home() {
       <Text weight="bold" size="1" type="title">123</Text>
       <Button type="primary" style="fill">관심기업 생성</Button>
       <Button type="primary" style="outline">관심기업 생성</Button>
+      <CheckBox  checked={true}/>
+      <CheckBox  checked={false}/>
     </>
   );
 }
