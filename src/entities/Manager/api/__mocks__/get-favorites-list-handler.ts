@@ -11,8 +11,6 @@ export const favoritesHandler = [
 
     // 이메일 없으면 400
 
-    return HttpResponse.json({ message: "email is required" }, { status: 400 });
-
     const allItems = [
       { id: 1, company_name: "삼성", created_at: "2025-11-12T07:57:31.623756" },
       { id: 2, company_name: "현대", created_at: "2025-11-12T08:10:21.123456" },

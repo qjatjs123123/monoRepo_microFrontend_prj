@@ -24,7 +24,7 @@
 
   /* checkBox color */
   --color-checked: #ff8700;
-  
+  --color-checked-300: #fff7e0;
 
   /* font bold */
   --font-weight-normal: 400;
@@ -34,7 +34,7 @@
 
   /* border */
   --color-line-200: #f3f4f6;
-  --color-line-400: #dfe3e8;
+  --color-line-400: #ced2d6;
 
   /* label */
   --color-label-100: #f9fafb;

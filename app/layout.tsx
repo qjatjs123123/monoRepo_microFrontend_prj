@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../src/app/styles/globals.css";
 import App from "@/app";
+import { Layout } from "@/shared/ui/Layout/Layout";
 
 if (
-  process.env.NEXT_RUNTIME === 'nodejs' &&
-  process.env.NODE_ENV !== 'production' &&
-  process.env.NEXT_PUBLIC_MSW_ENABLED !== 'false'
+  process.env.NEXT_RUNTIME === "nodejs" &&
+  process.env.NODE_ENV !== "production" &&
+  process.env.NEXT_PUBLIC_MSW_ENABLED !== "false"
 ) {
-  import('@/shared/config/mocks/server').then(({ server }) => {
-    server.listen()
-  })
+  import("@/shared/config/mocks/server").then(({ server }) => {
+    server.listen();
+  });
 }
 
 const geistSans = Geist({
@@ -38,7 +39,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <App>{children}</App>
+        <App>
+          <Layout>{children}</Layout>
+        </App>
       </body>
     </html>
   );

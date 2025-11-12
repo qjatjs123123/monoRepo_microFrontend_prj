@@ -10,9 +10,9 @@ type Props = PropsWithChildren<{
   rd?: "sm" | "md" | "lg";
   className?: string;
   disabled?: boolean;
-  onChange: () => void;
+  onChange?: () => void;
   id?: string; // label과 연결
-  content: string;
+  content?: string;
 }>;
 
 function CheckBox(props: Props) {
@@ -21,7 +21,7 @@ function CheckBox(props: Props) {
     type = "normal",
     disabled,
     content,
-    onChange,
+    onChange = () => {},
     id,
     className,
   } = props;
