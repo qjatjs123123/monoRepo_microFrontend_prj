@@ -15,7 +15,7 @@ export function NextButton({ currentPage, totalPage }: NextButtonProps) {
     <Button
       disabled={currentPage === totalPage}
       onClick={() => changePageQuery(currentPage + 1)}
-      className={`px-2 py-1 rounded cursor-pointer !border-0 ${
+      className={`px-2 py-1 rounded cursor-pointer !border-0 sm:!flex !hidden ${
         currentPage === totalPage &&
         "!text-[var(--color-status-disable)] cursor-not-allowed "
       }`}

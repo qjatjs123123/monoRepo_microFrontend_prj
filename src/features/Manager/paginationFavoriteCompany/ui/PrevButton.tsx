@@ -15,7 +15,7 @@ export function PrevButton({ currentPage }: PrevButtonProps) {
     <Button
       disabled={currentPage === 1}
       onClick={() => changePageQuery(currentPage - 1)}
-      className={`px-2 py-1 rounded cursor-pointer !border-0 ${
+      className={`px-2 py-1 rounded cursor-pointer !border-0  sm:!flex !hidden ${
         currentPage === 1 &&
         "!text-[var(--color-status-disable)] !cursor-not-allowed "
       }`}
