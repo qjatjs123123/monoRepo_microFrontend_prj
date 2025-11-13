@@ -51,4 +51,7 @@
   --radius-md: calc(1rem - 8px);
   --radius-sm: 4px;
   --radius-xs: calc(1rem - 12px);
+
+  /* status */
+  --color-status-disable: #cbd5e1;
 }

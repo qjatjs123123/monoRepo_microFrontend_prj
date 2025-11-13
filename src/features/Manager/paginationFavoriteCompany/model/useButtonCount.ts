@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export function useButtonCount() {
-  const [maxButton, setMaxButtons] = useState(10);
+  const [maxButton, setMaxButtons] = useState(8);
   const [sideButtonCount, setSideButtonCount] = useState(2);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ export function useButtonCount() {
         setMaxButtons(5);
         setSideButtonCount(1);
       } else {
-        setMaxButtons(10);
+        setMaxButtons(8);
         setSideButtonCount(2);
       }
     };

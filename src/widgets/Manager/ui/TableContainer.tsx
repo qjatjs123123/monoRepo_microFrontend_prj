@@ -19,8 +19,8 @@ export async function TableContainer({ page }: SearchParamsProps) {
       <CheckProvider data={data}>
         <TableTitle />
         <TableContent data={data} />
-        <TablePagination />
       </CheckProvider>
+      <TablePagination />
     </HydrationBoundary>
   );
 }

@@ -1,5 +1,7 @@
 import RightIcon from "@/shared/ui/Icon/RightIcon";
 import { useChangePageQuery } from "../model/useChangePageQuery";
+import { Button } from "@/shared/ui/Button/Button";
+import { Text } from "@/shared/ui/Text/Text";
 
 interface NextButtonProps {
   currentPage: number;
@@ -10,15 +12,16 @@ export function NextButton({ currentPage, totalPage }: NextButtonProps) {
   const changePageQuery = useChangePageQuery();
 
   return (
-    <button
+    <Button
       disabled={currentPage === totalPage}
       onClick={() => changePageQuery(currentPage + 1)}
-      className={`px-2 py-1 rounded cursor-pointer ${
+      className={`px-2 py-1 rounded cursor-pointer !border-0 ${
         currentPage === totalPage &&
-        "!text-[var(--color-status-disable)] cursor-not-allowed"
+        "!text-[var(--color-status-disable)] cursor-not-allowed "
       }`}
     >
+      <Text>다음</Text>
       <RightIcon color={currentPage === totalPage ? "#cbd5e1" : "black"} />
-    </button>
+    </Button>
   );
 }
