@@ -5,10 +5,10 @@ import TanStackProvider from "./providers/TanStackProvider";
 
 export default function App({ children } : { children : ReactNode }) {
   return (
-    // <MSWProvider>
+    <MSWProvider>
       <TanStackProvider>
         <PortalProvider>{children}</PortalProvider>
       </TanStackProvider>
-    // </MSWProvider>
+    </MSWProvider>
   );
 }

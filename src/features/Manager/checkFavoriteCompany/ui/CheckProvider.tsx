@@ -24,7 +24,7 @@ export const CheckContext = createContext<CheckContextType | undefined>(
 export const CheckProvider = ({ children, data }: CheckProviderProps) => {
   const { checkedItem, checkedAll, isAllChecked, isChecked } =
     useCheckService(data);
-
+  console.log("provider");
   return (
     <CheckContext.Provider
       value={{ checkedItem, checkedAll, isAllChecked, isChecked }}

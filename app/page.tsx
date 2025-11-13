@@ -1,17 +1,13 @@
-import { getFavoritesList } from "@/entities/Manager/api/get-favorites-list";
-import { Banner } from "@/shared/ui/Banner/Banner";
-import { TableContainer } from "@/widgets/Manager";
+import { Page } from "@/pages/Manager";
 
-export default async function Home() {
-  const favorites = await getFavoritesList({
-    email: "test@example.com",
-    page: "1",
-  });
+interface SearchParamsProps {
+  searchParams: Promise<{
+    page?: string;
+  }>;
+}
 
-  return (
-    <>
-      <Banner title="관심기업 관리 서비스" />
-      <TableContainer data={favorites} />
-    </>
-  );
+export default async function Home({ searchParams }: SearchParamsProps) {
+  const { page = "1" } = (await searchParams) ?? {};
+
+  return <Page page={page} />;
 }
