@@ -1,9 +1,10 @@
 "use client";
 
-import { FavoriteCompanyCell, FavoriteCompanyList } from "@/entities/Manager";
+import { FavoriteCompanyList } from "@/entities/Manager";
 import { useCheckContext } from "@/features/Manager/checkFavoriteCompany";
 import CheckBox from "@/shared/ui/CheckBox/CheckBox";
 import { Table } from "@/shared/ui/Table/Table";
+import { TableCell } from "./TableCell";
 
 export function TableContent({ data }: { data: FavoriteCompanyList }) {
   const { checkedItem, checkedAll, isAllChecked, isChecked } =
@@ -24,7 +25,7 @@ export function TableContent({ data }: { data: FavoriteCompanyList }) {
 
       <Table.Body>
         {data.items.map((item) => (
-          <FavoriteCompanyCell
+          <TableCell
             onChange={checkedItem}
             checked={isChecked(item.id)}
             key={item.id}
