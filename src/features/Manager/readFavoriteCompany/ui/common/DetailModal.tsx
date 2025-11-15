@@ -1,4 +1,5 @@
 import { useGetFavoriteDetail } from "@/entities/Manager/model/useGetFavoriteDetail";
+import { UpdateModalEntry } from "@/features/Manager/updateFavoriteCompany";
 import { Button } from "@/shared/ui/Button/Button";
 import { EditIcon } from "@/shared/ui/Icon/EditIcon";
 import { Text } from "@/shared/ui/Text/Text";
@@ -19,10 +20,18 @@ export function DetailModal({ favoriteId }: { favoriteId: number }) {
       </div>
 
       <div className="flex justify-end p-2 w-full">
-        <Button style="fill" className="flex gap-2">
-          <EditIcon />
-          <Text>수정하기</Text>
-        </Button>
+        <UpdateModalEntry favoriteId={favoriteId}>
+          {(showUpdateModal) => (
+            <Button
+              style="fill"
+              className="flex gap-2"
+              onClick={() => showUpdateModal()}
+            >
+              <EditIcon />
+              <Text>수정하기</Text>
+            </Button>
+          )}
+        </UpdateModalEntry>
       </div>
     </>
   );

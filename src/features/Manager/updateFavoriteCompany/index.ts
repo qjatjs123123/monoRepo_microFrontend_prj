@@ -1,0 +1,1 @@
+export { UpdateModalEntry } from "./ui/UpdateModalEntry";
