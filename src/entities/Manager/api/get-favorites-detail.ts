@@ -6,14 +6,16 @@ export interface FetchFavoriteDetailParams {
   email: string;
 }
 
-export async function getFavoriteDetail({ favoriteId, email }: FetchFavoriteDetailParams) {
-  try {
-    const response = await api.get<FavoriteDetailDTO>(`/favorites/${favoriteId}`, {
+export async function getFavoriteDetail({
+  favoriteId,
+  email,
+}: FetchFavoriteDetailParams) {
+  const response = await api.get<FavoriteDetailDTO>(
+    `/favorites/${favoriteId}`,
+    {
       params: { email },
-    });
+    }
+  );
 
-    return response.data;
-  } catch (error: unknown) {
-    throw error;
-  }
+  return response.data;
 }
