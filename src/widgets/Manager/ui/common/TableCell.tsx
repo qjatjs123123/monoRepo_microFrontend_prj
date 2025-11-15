@@ -21,9 +21,9 @@ export const TableCell = React.memo(function TableCell({
   const mutation = useDeleteFavoriteCompanyOne();
 
   return (
-    <DetailModalWrapper>
+    <DetailModalWrapper favoriteId={item.id}>
       {(showDetailModal) => (
-        <Table.Row checked={checked} onClick={showDetailModal}>
+        <Table.Row checked={checked} onClick={showDetailModal} >
           <Table.Cell align="center">
             <CheckBox checked={checked} onChange={() => onChange(item.id)} />
           </Table.Cell>
