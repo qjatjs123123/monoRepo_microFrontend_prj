@@ -12,7 +12,6 @@ export async function postFavorite(data: FavoriteCompanyFormProps) {
 
     return response.data;
   } catch (error: unknown) {
-    console.log(error);
     throw error;
   }
 }

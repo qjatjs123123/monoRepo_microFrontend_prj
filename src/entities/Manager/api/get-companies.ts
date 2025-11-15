@@ -8,7 +8,6 @@ export async function getCompanies() {
 
     return mapCompanies(response.data);
   } catch (error: unknown) {
-    console.log(error);
     throw error;
   }
 }

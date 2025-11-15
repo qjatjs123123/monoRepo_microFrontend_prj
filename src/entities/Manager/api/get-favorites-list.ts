@@ -7,14 +7,9 @@ export interface FetchFavoritesParams {
   email?: string;
 }
 export async function getFavoritesList({ email, page }: FetchFavoritesParams) {
-   try {
-    const response = await api.get<FavoriteCompanyListDTO>('/favorites', {
-      params: { email, page },
-    });
+  const response = await api.get<FavoriteCompanyListDTO>("/favorites", {
+    params: { email, page },
+  });
 
-    return mapFavoritesList(response.data);
-  } catch (error: unknown ) {
-    console.log(error);
-    throw error;
-  }
+  return mapFavoritesList(response.data);
 }

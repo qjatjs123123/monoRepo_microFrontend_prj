@@ -14,7 +14,6 @@ export async function getFavoriteDetail({ favoriteId, email }: FetchFavoriteDeta
 
     return response.data;
   } catch (error: unknown) {
-    console.error(error);
     throw error;
   }
 }

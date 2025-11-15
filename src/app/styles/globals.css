@@ -15,6 +15,7 @@
   --text-body-1: 1rem;
   --text-body-2: .9375rem;
   --text-body-3: .875rem;
+  --text-body-4: .8rem;
   --text-title-1: 2rem;
   --text-title-2: 1.625rem;
   --text-title-3: 1.25rem;
@@ -26,7 +27,7 @@
   --text-color-100: #3E3E3E;
 
   /* button color */
-  --color-secondary-300:  #333333;
+  --color-secondary-300: #333333;
   --color-secondary-400: #222222;
   --color-secondary-600: #1a1a1a;
   --color-primary: #000000;
