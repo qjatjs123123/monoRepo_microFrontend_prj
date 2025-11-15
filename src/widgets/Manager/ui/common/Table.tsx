@@ -5,6 +5,7 @@ import { Table as BaseTable } from "@/shared/ui/Table/Table";
 import { TableHead } from "./TableHead";
 import { TableBody } from "./TableBody";
 import { Empty } from "@/shared/ui/Empty/Empty";
+import { Pagination } from "./Pagination";
 
 export function Table({ data }: { data: FavoriteCompanyList }) {
   const isEmpty = data.items.length === 0;
@@ -22,9 +23,12 @@ function TableEmpty() {
 
 function TableExist({ data }: { data: FavoriteCompanyList }) {
   return (
-    <BaseTable>
-      <TableHead />
-      <TableBody data={data} />
-    </BaseTable>
+    <>
+      <BaseTable>
+        <TableHead />
+        <TableBody data={data} />
+      </BaseTable>
+      <Pagination />
+    </>
   );
 }

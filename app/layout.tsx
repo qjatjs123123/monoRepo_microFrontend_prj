@@ -6,15 +6,15 @@ import { Toast } from "@/shared/ui/Toast/ui/Toast";
 import { Layout } from "@/shared/ui/Layout/Layout";
 import { Header } from "@/widgets/Header";
 
-if (
-  process.env.NEXT_RUNTIME === "nodejs" &&
-  process.env.NODE_ENV !== "production" &&
-  process.env.NEXT_PUBLIC_MSW_ENABLED !== "false"
-) {
-  import("@/shared/config/mocks/server").then(({ server }) => {
-    server.listen();
-  });
-}
+// if (
+//   process.env.NEXT_RUNTIME === "nodejs" &&
+//   process.env.NODE_ENV !== "production" &&
+//   process.env.NEXT_PUBLIC_MSW_ENABLED !== "false"
+// ) {
+//   import("@/shared/config/mocks/server").then(({ server }) => {
+//     server.listen();
+//   });
+// }
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

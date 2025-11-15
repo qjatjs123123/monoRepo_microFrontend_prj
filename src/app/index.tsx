@@ -6,12 +6,12 @@ import { OverlayProvider } from "./providers/OverlayProvider";
 
 export default function App({ children }: { children: ReactNode }) {
   return (
-    <MSWProvider>
+    // <MSWProvider>
       <TanStackProvider>
         <PortalProvider>
           <OverlayProvider>{children}</OverlayProvider>
         </PortalProvider>
       </TanStackProvider>
-    </MSWProvider>
+    // </MSWProvider>
   );
 }

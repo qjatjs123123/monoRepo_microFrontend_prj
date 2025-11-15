@@ -14,7 +14,6 @@ export function TableWrapper() {
         <TableTitle />
         <Table data={data} />
       </CheckProvider>
-      <Pagination />
     </>
   );
 }
