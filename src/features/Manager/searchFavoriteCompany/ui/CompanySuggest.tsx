@@ -18,8 +18,8 @@ export function CompanySuggest({
   isExist
 }: CompanySuggestProps) {
   const { data } = useGetCompanies();
-  const filtered = getCompanySuggestions(value, data.companies);
-  
+  const filtered = getCompanySuggestions(value, data!.companies);
+
   useEffect(() => {
     setIsExist(filtered.length > 0)
   }, [filtered.length, setIsExist]);

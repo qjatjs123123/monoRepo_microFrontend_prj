@@ -6,6 +6,7 @@ import { Suspense, useState } from "react";
 import { ChevronDownIcon } from "../../../../shared/ui/Icon/ChevronDownIcon";
 import { ChevronUpIcon } from "@/shared/ui/Icon/ChevronUpIcon";
 import { ErrorBoundary } from "react-error-boundary";
+import { useGetCompanies } from "@/entities/Manager";
 
 interface SearchDropDownProps {
   value: string;
@@ -15,6 +16,8 @@ interface SearchDropDownProps {
 export function SearchDropDown({ value, onChange }: SearchDropDownProps) {
   const [showList, setShowList] = useState(false);
   const [isExist, setIsExist] = useState(false);
+  const { data } = useGetCompanies();
+  const isShow = data && isExist;
 
   return (
     <div className="relative">
@@ -29,18 +32,14 @@ export function SearchDropDown({ value, onChange }: SearchDropDownProps) {
         />
         <WrapperIcon isDown={isExist} />
       </div>
-      {showList && (
-        <ErrorBoundary fallback={<></>}>
-          <Suspense>
-            <CompanySuggest
-              value={value}
-              onChange={onChange}
-              setShowList={setShowList}
-              isExist={isExist}
-              setIsExist={setIsExist}
-            />
-          </Suspense>
-        </ErrorBoundary>
+      {isShow && (
+        <CompanySuggest
+          value={value}
+          onChange={onChange}
+          setShowList={setShowList}
+          isExist={isExist}
+          setIsExist={setIsExist}
+        />
       )}
     </div>
   );
