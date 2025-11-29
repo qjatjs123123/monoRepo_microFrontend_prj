@@ -28,14 +28,14 @@ importers:
         specifier: ^4.1.17
         version: 4.1.17
 
-  apps/demo:
+  apps/header:
     dependencies:
       '@module-federation/runtime':
         specifier: ^0.21.6
         version: 0.21.6
       '@monorepo/ui':
         specifier: workspace:*
-        version: link:../../packages/ui-library
+        version: link:../../packages/ui
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -85,6 +85,9 @@ importers:
 
   apps/shell:
     dependencies:
+      '@monorepo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -138,7 +141,7 @@ importers:
         specifier: ^0.0.1
         version: 0.0.1
 
-  packages/ui-library:
+  packages/ui:
     devDependencies:
       '@types/react':
         specifier: ^19.2.7

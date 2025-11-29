@@ -49,6 +49,8 @@ module.exports = {
         "2xl": "calc(1rem - 2px)",
       },
       fontSize: {
+        display1: "3rem",
+        display2: "2.5rem",
         body1: "1rem",
         body2: ".9375rem",
         body3: ".875rem",

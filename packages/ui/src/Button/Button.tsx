@@ -11,13 +11,6 @@ type Props = PropsWithChildren<{
   dataCypress?: string;
 }>;
 
-const baseClasses = `flex items-center border-none bg-backgroundDefault cursor-pointer`;
-
-const typeClasses = {
-  primary: `bg-primary text-[white] h-[300px]`,
-  default: `bg-backgroundDefault`,
-};
-
 export function Button(props: Props) {
   const {
     type = "primary",
@@ -30,15 +23,18 @@ export function Button(props: Props) {
     ...rest
   } = props;
 
+  const baseClasses = `flex items-center border-none bg-backgroundDefault cursor-pointer`;
+
+  const typeClasses = {
+    primary: `bg-primary text-[white] h-[300px]`,
+    default: `bg-backgroundDefault`,
+  };
+
   return (
     <button
       type="button"
       data-cy={dataCypress}
-      className={classNames(
-        baseClasses,
-        typeClasses[type],
-
-      )}
+      className={classNames(baseClasses, typeClasses[type])}
       disabled={disabled}
       {...rest}
     >

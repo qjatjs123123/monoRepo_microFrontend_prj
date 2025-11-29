@@ -1,0 +1,65 @@
+/* 루트/global.css */
+@import "tailwindcss";
+@source "../node_modules/@monorepo/ui";
+@source "../../header/src";
+
+@theme {
+  /* Colors */
+  --color-background-default: #ffffff;
+  --color-background-alt: #f5f6fa;
+  --color-component-dark: #23272e;
+  --color-background-modal: #acacae;
+
+  --color-input: #ffb27f;
+  --color-input-hover: #f3f4f6;
+  --color-input-placeholder: #aaa;
+
+  --color-text-100: #3E3E3E;
+
+  --color-primary: #000000;
+  --color-secondary-300: #333333;
+  --color-secondary-400: #222222;
+  --color-secondary-600: #1a1a1a;
+
+  --color-checked: #ff8700;
+  --color-checked-300: #fff7e0;
+
+  --color-label-100: #f9fafb;
+  --color-label-200: #f3f4f6;
+  --color-label-500: #9ca3af;
+  --color-label-700: #7F7F82;
+  --color-label-800: #3E3E3E;
+  --color-label-900: #0d0e0e;
+
+  --color-status-disable: #cbd5e1;
+
+  /* Border radius */
+  --radius-xs: calc(1rem - 12px);
+  --radius-sm: 4px;
+  --radius-md: calc(1rem - 8px);
+  --radius-lg: calc(1rem - 6px);
+  --radius-xl: calc(1rem - 4px);
+  --radius-2xl: calc(1rem - 2px);
+
+  /* Font size */
+  --text-display1: 3rem;
+  --text-display2: 2.5rem;
+  --text-body1: 1rem;
+  --text-body2: .9375rem;
+  --text-body3: .875rem;
+  --text-body4: .8rem;
+  --text-title1: 2rem;
+  --text-title2: 1.625rem;
+  --text-title3: 1.25rem;
+  --text-title4: 1.125rem;
+  --text-caption1: 0.75rem;
+
+  /* Font weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Font family */
+  --font-body: Inter, sans-serif;
+}
