@@ -1,35 +1,24 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "pwc_prj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm --filter ./apps/demo dev"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.23.0",
   "dependencies": {
-    "@tanstack/react-query": "^5.90.7",
-    "@tanstack/react-query-devtools": "^5.90.2",
-    "axios": "^1.13.2",
-    "classnames": "^2.5.1",
-    "framer-motion": "^12.23.24",
-    "jotai": "^2.15.1",
-    "next": "^15.5.6",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "react-error-boundary": "^6.0.0",
-    "react-hook-form": "^7.66.0"
+    "classnames": "^2.5.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19.2.3",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.1",
-    "msw": "^2.12.1",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@tailwindcss/postcss": "^4.1.17",
+    "@tailwindcss/vite": "^4.1.17",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
   }
 }
