@@ -1,3 +1,4 @@
 /* 루트/global.css */
-@import "tailwindcss";
-@source "../node_modules/@monorepo/ui";
+@import "tailwindcss" prefix(header);
+@import "@monorepo/tailwind-config/theme.css";
+

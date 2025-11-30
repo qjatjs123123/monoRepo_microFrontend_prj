@@ -6,5 +6,8 @@
   ],
   "compilerOptions": {
     "skipLibCheck": true
+  },
+  "paths": {
+    "@/*": ["src/*"] // import Button from "@/components/Button"
   }
 }

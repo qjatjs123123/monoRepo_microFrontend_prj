@@ -3,8 +3,8 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { federation } from "@module-federation/vite";
 
-
 export default defineConfig({
+  base: "http://localhost:5002/",
   plugins: [
     react(),
     tailwindcss(),
@@ -14,7 +14,11 @@ export default defineConfig({
       exposes: {
         "./Banner": "./src/Banner.tsx",
       },
-      shared: ["react", "react-dom"],
+      shared: {
+        react: { singleton: true, strictVersion: true },
+        "react-dom": { singleton: true, strictVersion: true },
+        "@monorepo/ui": { singleton: true, strictVersion: false },
+      },
     }),
   ],
   build: {

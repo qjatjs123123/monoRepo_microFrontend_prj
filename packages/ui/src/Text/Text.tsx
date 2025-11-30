@@ -1,13 +1,12 @@
 import React from "react";
-import classNames from "classnames";
-import { typeClasses, weightClasses } from "./style";
+import { typeStyles, weightStyles } from "./style";
 
 interface TextProps {
   children: React.ReactNode;
-  className?: string;
   type?: "title" | "body" | "caption" | "display";
   size?: "1" | "2" | "3" | "4";
   weight?: "normal" | "medium" | "semibold" | "bold";
+  className?: string;
 }
 
 export const Text: React.FC<TextProps> = ({
@@ -17,14 +16,9 @@ export const Text: React.FC<TextProps> = ({
   weight = "normal",
   className,
 }) => {
+  const typeKey = `${type}_${size}`;
   return (
-    <span
-      className={classNames(
-        typeClasses[`${type}_${size}`],
-        weightClasses[weight],
-        className
-      )}
-    >
+    <span css={[typeStyles[typeKey], weightStyles[weight]]} className={className}>
       {children}
     </span>
   );

@@ -12,10 +12,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true, // Vite가 빌드를 담당하므로 ts-config에서는 noEmit 설정
+    "jsxImportSource": "@emotion/react",
     "jsx": "react-jsx",
     "esModuleInterop": true, // CommonJS <-> ES Module 호환
     "allowSyntheticDefaultImports": true,
-    
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,

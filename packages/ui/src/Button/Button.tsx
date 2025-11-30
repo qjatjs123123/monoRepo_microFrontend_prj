@@ -37,7 +37,8 @@ export function Button(props: Props) {
       className={classNames(baseClasses, typeClasses[type])}
       disabled={disabled}
       {...rest}
-    >
+    > 
+    <div className="btn"></div>
       {children}
     </button>
   );

@@ -1,0 +1,60 @@
+@import "./tokens.css";
+@theme {
+  --color-background-default: var(--color-background-default);
+  --color-background-alt: var(--color-background-alt);
+  --color-component-dark: var(--color-component-dark);
+  --color-background-modal: var(--color-background-modal);
+
+  --color-input: var(--color-input);
+  --color-input-hover: var(--color-input-hover);
+  --color-input-placeholder: var(--color-input-placeholder);
+
+  --color-text-100: var(--color-text-100);
+
+  --color-primary: var(--color-primary);
+  --color-secondary-300: var(--color-secondary-300);
+  --color-secondary-400: var(--color-secondary-400);
+  --color-secondary-600: var(--color-secondary-600);
+
+  --color-checked: var(--color-checked);
+  --color-checked-300: var(--color-checked-300);
+
+  --color-label-100: var(--color-label-100);
+  --color-label-200: var(--color-label-200);
+  --color-label-500: var(--color-label-500);
+  --color-label-700: var(--color-label-700);
+  --color-label-800: var(--color-label-800);
+  --color-label-900: var(--color-label-900);
+
+  --color-status-disable: var(--color-status-disable);
+
+  /* Border radius */
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+
+  /* Font size */
+  --text-display1: var(--text-display1);
+  --text-display2: var(--text-display2);
+  --text-body1: var(--text-body1);
+  --text-body2: var(--text-body2);
+  --text-body3: var(--text-body3);
+  --text-body4: var(--text-body4);
+  --text-title1: var(--text-title1);
+  --text-title2: var(--text-title2);
+  --text-title3: var(--text-title3);
+  --text-title4: var(--text-title4);
+  --text-caption1: var(--text-caption1);
+
+  /* Font weight */
+  --font-weight-normal: var(--font-weight-normal);
+  --font-weight-medium: var(--font-weight-medium);
+  --font-weight-semibold: var(--font-weight-semibold);
+  --font-weight-bold: var(--font-weight-bold);
+
+  /* Font family */
+  --font-body: var(--font-body);
+}

@@ -7,6 +7,10 @@
     "build": "vite build && vite build --ssr",
     "dev": "vite"
   },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@monorepo/tailwind-config": "workspace:*"
+  },
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"

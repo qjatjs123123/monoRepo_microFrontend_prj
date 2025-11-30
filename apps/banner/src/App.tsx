@@ -1,5 +1,4 @@
 import  Banner  from "./Banner"
-import './global.css'
 
 function App() {
 
