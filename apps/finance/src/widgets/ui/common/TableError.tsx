@@ -1,0 +1,56 @@
+// "use client";
+
+// import { Button } from "@monorepo/ui";
+// import { ErrorMessage } from "@/shared/ui/Error/ErrorMessage";
+// import { Text } from "@monorepo/ui";
+// import { useQueryClient } from "@tanstack/react-query";
+
+// interface FavoriteListErrorProps {
+//   resetErrorBoundary: (...args: Array<unknown>) => void; 
+//   page: string
+// }
+
+// export function TableError({ resetErrorBoundary, page }: FavoriteListErrorProps) {
+//   const queryClient = useQueryClient();
+
+//   return (
+//     <ErrorMessage
+//       src="/empty-2-spot-apng.png"
+//       title="다시 시도해주세요"
+//       description={
+//         <div className="flex flex-col">
+//           <Text
+//             type="body"
+//             weight="bold"
+//             size="3"
+//             className="text-[var(--text-color-100)]"
+//           >
+//             서버에 잠깐 문제가 생겨
+//           </Text>
+//           <Text
+//             type="body"
+//             weight="bold"
+//             size="3"
+//             className="text-[var(--text-color-100)]"
+//           >
+//             관심기업 목록을 불러오지 못했어요
+//           </Text>
+//         </div>
+//       }
+//       button={
+//         <Button
+//           style="fill"
+//           onClick={() => {
+//             resetErrorBoundary();
+//             queryClient.removeQueries({
+//               queryKey: ["favorite", page],
+//               exact: true,
+//             });
+//           }}
+//         >
+//           다시 시도하기
+//         </Button>
+//       }
+//     />
+//   );
+// }

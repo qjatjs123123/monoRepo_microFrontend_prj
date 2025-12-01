@@ -2,17 +2,23 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { federation } from "@module-federation/vite";
+import path from "path";
 
 export default defineConfig({
   base: "http://localhost:5003/",
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
   plugins: [
     react(),
     tailwindcss(),
     federation({
-      name: "mfe_banner",
+      name: "mfe_finance",
       filename: "remoteEntry.js",
       exposes: {
-        "./App": "./src/App.tsx",
+        "./Finance": "./src/app/App.tsx",
       },
       shared: {
         react: { singleton: true, strictVersion: true },
@@ -21,6 +27,7 @@ export default defineConfig({
       },
     }),
   ],
+
   build: {
     target: "esnext",
   },
@@ -28,6 +35,6 @@ export default defineConfig({
     port: 5003,
   },
   server: {
-    port: 5003, // dev 서버 포트 설정
+    port: 5003,
   },
 });

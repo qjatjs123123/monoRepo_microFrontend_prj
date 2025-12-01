@@ -8,7 +8,7 @@ import {
   TableProps,
   TableRowProps,
 } from "./type";
-
+import { css } from "@emotion/react";
 export function Table({ children, className }: TableProps) {
   return (
     <table
@@ -84,7 +84,9 @@ Table.Cell = function TableCell({
   className,
 }: TableCellProps) {
   return (
-    <td className={styles.cell}>
+    <td
+      css={css`padding: 10px;`}
+    >
       <div
         className={classNames(
           styles["cell-wrapper"],

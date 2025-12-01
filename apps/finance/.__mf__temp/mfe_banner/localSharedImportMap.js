@@ -4,6 +4,11 @@
     import {loadShare} from "@module-federation/runtime";
     const importMap = {
       
+        "@monorepo/ui": async () => {
+          let pkg = await import("__mf__virtual/mfe_banner__prebuild___mf_0_monorepo_mf_1_ui__prebuild__.js");
+            return pkg;
+        }
+      ,
         "react": async () => {
           let pkg = await import("__mf__virtual/mfe_banner__prebuild__react__prebuild__.js");
             return pkg;
@@ -17,6 +22,36 @@
     }
       const usedShared = {
       
+          "@monorepo/ui": {
+            name: "@monorepo/ui",
+            version: "1.0.0",
+            scope: ["default"],
+            loaded: false,
+            from: "mfe_banner",
+            async get () {
+              if (false) {
+                throw new Error(`Shared module '${"@monorepo/ui"}' must be provided by host`);
+              }
+              usedShared["@monorepo/ui"].loaded = true
+              const {"@monorepo/ui": pkgDynamicImport} = importMap
+              const res = await pkgDynamicImport()
+              const exportModule = {...res}
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              })
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^1.0.0",
+              
+            }
+          }
+        ,
           "react": {
             name: "react",
             version: "19.2.0",

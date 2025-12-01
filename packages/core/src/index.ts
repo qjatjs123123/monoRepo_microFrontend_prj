@@ -1,3 +1,4 @@
+export { formatDate } from "./lib/formatDate";
 export { TanStackProvider } from "./providers/TanStackProvider";
 
 export { PortalProvider } from "./providers/PortalProvider";

@@ -57,4 +57,9 @@
 
   /* Font family */
   --font-body: Inter, sans-serif;
+
+  
+  /* border */
+  --color-line-200: #f3f4f6;
+  --color-line-400: #ced2d6;
 }

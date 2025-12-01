@@ -1,5 +1,6 @@
 import classNames from "classnames";
-import type { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
+import styles from "./Button.module.css";
 
 type Props = PropsWithChildren<{
   type?: "primary" | "default";
@@ -23,22 +24,22 @@ export function Button(props: Props) {
     ...rest
   } = props;
 
-  const baseClasses = `flex items-center border-none bg-backgroundDefault cursor-pointer`;
-
-  const typeClasses = {
-    primary: `bg-primary text-[white] h-[300px]`,
-    default: `bg-backgroundDefault`,
-  };
-
   return (
     <button
       type="button"
       data-cy={dataCypress}
-      className={classNames(baseClasses, typeClasses[type])}
+      className={classNames(
+        styles.button,
+        styles[`button--type-${type}`],
+        styles[`button--style-${style}`],
+        styles[`button--size-${size}`],
+        styles[`button--rd`],
+        "font-medium",
+        className
+      )}
       disabled={disabled}
       {...rest}
-    > 
-    <div className="btn"></div>
+    >
       {children}
     </button>
   );
