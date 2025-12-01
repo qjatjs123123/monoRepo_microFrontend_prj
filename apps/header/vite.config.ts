@@ -12,7 +12,7 @@ export default defineConfig({
       name: "mfe_header",
       filename: "remoteEntry.js",
       exposes: {
-        "./Header": "./src/Header.tsx",
+        "./Header": "./src/Headers.tsx",
       },
       shared: {
         react: { singleton: true, strictVersion: true },

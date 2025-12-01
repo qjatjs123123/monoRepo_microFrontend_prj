@@ -2,7 +2,7 @@ import { Text } from "@monorepo/ui";
 import Logo from "@monorepo/ui/public/Logo.png";
 import "./global.css";
 
-export default function Header() {
+export default function Headers() {
   return (
     <div className="header:flex header:justify-between  header:w-full header:py-5">
       <img src={Logo} alt="회사 로고" width={117} height={24} />
