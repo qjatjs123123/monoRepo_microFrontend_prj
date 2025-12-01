@@ -8,7 +8,6 @@ export default function App() {
     <TanStackProvider>
       <Header />
       <Banner />
-      1
       {/* <Finance /> */}
     </TanStackProvider>
   );
