@@ -4,8 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 import { federation } from "@module-federation/vite";
 
 export default defineConfig({
-  // @ts-ignore
-  base: import.meta.env.VITE_API_BASE_URL,
   plugins: [
     react(),
     tailwindcss(),
