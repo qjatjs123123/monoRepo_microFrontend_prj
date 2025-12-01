@@ -1,4 +1,8 @@
 /*.js 
   Access-Control-Allow-Origin: *
+
 /*.css
+  Access-Control-Allow-Origin: *
+  
+/assets/*.css
   Access-Control-Allow-Origin: *
