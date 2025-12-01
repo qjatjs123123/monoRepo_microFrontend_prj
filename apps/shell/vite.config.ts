@@ -10,21 +10,21 @@ export default defineConfig({
     federation({
       name: "shell",
       remotes: {
-        mfe_header: {
-          type: "module",
-          name: "mfe_header",
-          entry: "http://localhost:5001/remoteEntry.js",
-        },
+        // mfe_header: {
+        //   type: "module",
+        //   name: "mfe_header",
+        //   entry: "http://localhost:5001/remoteEntry.js",
+        // },
         mfe_banner: {
           type: "module",
           name: "mfe_banner",
           entry: "https://pwc-banner.netlify.app/remoteEntry.js",
         },
-        mfe_finance: {
-          type: "module",
-          name: "mfe_finance",
-          entry: "http://localhost:5003/remoteEntry.js",
-        },
+        // mfe_finance: {
+        //   type: "module",
+        //   name: "mfe_finance",
+        //   entry: "http://localhost:5003/remoteEntry.js",
+        // },
       },
       shared: ["react", "react-dom"],
     }),
