@@ -79,6 +79,14 @@
         
     }
       const usedRemotes = [
+                {
+                  entryGlobalName: "mfe_finance",
+                  name: "mfe_finance",
+                  type: "module",
+                  entry: "https://pwc-fin.netlify.app/remoteEntry.js",
+                  shareScope: "default",
+                }
+          
       ]
       export {
         usedShared,
