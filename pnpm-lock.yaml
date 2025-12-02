@@ -200,6 +200,9 @@ importers:
       '@monorepo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      react-router-dom:
+        specifier: ^7.10.0
+        version: 7.10.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
       '@eslint/js':
         specifier: ^9.39.1
@@ -307,6 +310,9 @@ importers:
       '@monorepo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      react-router-dom:
+        specifier: ^7.10.0
+        version: 7.10.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
       '@eslint/js':
         specifier: ^9.39.1

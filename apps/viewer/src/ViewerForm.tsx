@@ -149,7 +149,7 @@ export function ViewerForm() {
         </div>
 
         {iframeUrl && (
-          <iframe src={iframeUrl} className="w-full h-[800px] border" />
+          <iframe src={iframeUrl} className="w-full h-[800px] border flex justify-center" />
         )}
       </FormProvider>
     </div>

@@ -25,6 +25,11 @@ export default defineConfig({
           name: "mfe_finance",
           entry: "https://pwc-fin.netlify.app/remoteEntry.js",
         },
+        mfe_viewer: {
+          type: "module",
+          name: "mfe_viewer",
+          entry: "https://pwc-viewer.netlify.app/remoteEntry.js",
+        },
       },
       shared: ["react", "react-dom"],
     }),

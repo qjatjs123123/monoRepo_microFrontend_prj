@@ -10,9 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@monorepo/core": "workspace:*",
     "@monorepo/tailwind-config": "workspace:*",
     "@monorepo/ui": "workspace:*",
-    "@monorepo/core": "workspace:*"
+    "react-router-dom": "^7.10.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
