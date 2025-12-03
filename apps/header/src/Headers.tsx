@@ -14,7 +14,7 @@ export default function Headers() {
 
       <div className="header:flex header:gap-5">
         <Link to="/finance">
-          <Text type="body" weight={getWeight("/finance")}>
+          <Text type="body" weight={getWeight("/")}>
             일반과제
           </Text>
         </Link>

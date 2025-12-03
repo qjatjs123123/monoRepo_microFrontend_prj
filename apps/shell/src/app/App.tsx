@@ -12,7 +12,7 @@ export default function App() {
 
         {/* Routes 정의 */}
         <Routes>
-          <Route path="/finance" element={<Finance />} />
+          <Route path="/" element={<Finance />} />
           <Route path="/viewer" element={<Viewer />} />
           <Route path="*" element={<Finance />} /> {/* 기본 페이지 */}
         </Routes>
