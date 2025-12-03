@@ -13,7 +13,7 @@ export default function Headers() {
       <img src={Logo} alt="회사 로고" width={117} height={24} />
 
       <div className="header:flex header:gap-5">
-        <Link to="/finance">
+        <Link to="/">
           <Text type="body" weight={getWeight("/")}>
             일반과제
           </Text>
