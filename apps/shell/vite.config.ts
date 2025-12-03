@@ -47,6 +47,11 @@ export default defineConfig({
         "react-dom": { singleton: true, strictVersion: true },
         "@monorepo/ui": { singleton: true, strictVersion: false },
         "react-router-dom": { singleton: true, requiredVersion: "6.16.0" },
+        "@tanstack/react-query": {
+          singleton: true,
+          strictVersion: true, // 버전이 다르면 에러 → 권장
+          requiredVersion: "^5.0.0",
+        },
       },
     }),
   ],
