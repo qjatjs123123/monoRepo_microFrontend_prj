@@ -31,9 +31,20 @@ export default defineConfig({
           entry: "https://pwc-viewer.netlify.app/remoteEntry.js",
         },
       },
-      shared: ["react", "react-dom"],
+
+      /**
+       * 🔥 핵심: react-router-dom 반드시 공유해야 함
+       * Remote와 Host가 동일한 Router Context 사용하도록 강제
+       */
+      shared: {
+        react: { singleton: true, strictVersion: true },
+        "react-dom": { singleton: true, strictVersion: true },
+        "@monorepo/ui": { singleton: true, strictVersion: false },
+        "react-router-dom": { singleton: true, requiredVersion: "6.16.0" },
+      },
     }),
   ],
+
   build: {
     target: "esnext",
   },
@@ -41,6 +52,6 @@ export default defineConfig({
     port: 3000,
   },
   server: {
-    port: 3000, // dev 서버 포트 설정
+    port: 3000,
   },
 });
