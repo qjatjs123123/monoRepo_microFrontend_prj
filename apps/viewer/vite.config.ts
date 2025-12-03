@@ -19,7 +19,7 @@ export default defineConfig({
       name: "mfe-viewer",
       filename: "remoteEntry.js",
       exposes: {
-        "./Viewer": "./src/App.tsx",
+        "./Viewer": "./src/app/App.tsx",
       },
       shared: {
         react: { singleton: true, strictVersion: true },
