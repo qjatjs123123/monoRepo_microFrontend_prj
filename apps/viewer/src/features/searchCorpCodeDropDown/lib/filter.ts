@@ -1,4 +1,4 @@
-import { COMPANY_CODE, type CorpMap } from "@/entities/config/constants";
+import { type CorpMap } from "@/entities/config/constants";
 import { LIMIT } from "../config/constants";
 
 export function getCompanySuggestions(keyword: string, companies: CorpMap[]) {
