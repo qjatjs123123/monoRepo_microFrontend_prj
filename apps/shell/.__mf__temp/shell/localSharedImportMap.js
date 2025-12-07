@@ -228,10 +228,10 @@
                 }
           ,
                 {
-                  entryGlobalName: "mfe_finance",
-                  name: "mfe_finance",
+                  entryGlobalName: "mfe_banner",
+                  name: "mfe_banner",
                   type: "module",
-                  entry: "https://pwc-fin.netlify.app/remoteEntry.js",
+                  entry: "https://pwc-banner.netlify.app/remoteEntry.js",
                   shareScope: "default",
                 }
           ,
@@ -244,10 +244,10 @@
                 }
           ,
                 {
-                  entryGlobalName: "mfe_banner",
-                  name: "mfe_banner",
+                  entryGlobalName: "mfe_finance",
+                  name: "mfe_finance",
                   type: "module",
-                  entry: "https://pwc-banner.netlify.app/remoteEntry.js",
+                  entry: "https://pwc-fin.netlify.app/remoteEntry.js",
                   shareScope: "default",
                 }
           

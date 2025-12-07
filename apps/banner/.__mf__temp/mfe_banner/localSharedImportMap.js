@@ -5,23 +5,19 @@
     const importMap = {
       
         "@monorepo/core": async () => {
-          let pkg = await import("__mf__virtual/mfe_banner__prebuild___mf_0_monorepo_mf_1_core__prebuild__.js");
-            return pkg;
+          throw new Error(`Shared module '${"@monorepo/core"}' must be provided by host`);
         }
       ,
         "@monorepo/ui": async () => {
-          let pkg = await import("__mf__virtual/mfe_banner__prebuild___mf_0_monorepo_mf_1_ui__prebuild__.js");
-            return pkg;
+          throw new Error(`Shared module '${"@monorepo/ui"}' must be provided by host`);
         }
       ,
         "react": async () => {
-          let pkg = await import("__mf__virtual/mfe_banner__prebuild__react__prebuild__.js");
-            return pkg;
+          throw new Error(`Shared module '${"react"}' must be provided by host`);
         }
       ,
         "react-dom": async () => {
-          let pkg = await import("__mf__virtual/mfe_banner__prebuild__react_mf_2_dom__prebuild__.js");
-            return pkg;
+          throw new Error(`Shared module '${"react-dom"}' must be provided by host`);
         }
       
     }
@@ -34,7 +30,7 @@
             loaded: false,
             from: "mfe_banner",
             async get () {
-              if (false) {
+              if (true) {
                 throw new Error(`Shared module '${"@monorepo/core"}' must be provided by host`);
               }
               usedShared["@monorepo/core"].loaded = true
@@ -53,7 +49,7 @@
             shareConfig: {
               singleton: true,
               requiredVersion: "^0.0.1",
-              
+              import: false,
             }
           }
         ,
@@ -64,7 +60,7 @@
             loaded: false,
             from: "mfe_banner",
             async get () {
-              if (false) {
+              if (true) {
                 throw new Error(`Shared module '${"@monorepo/ui"}' must be provided by host`);
               }
               usedShared["@monorepo/ui"].loaded = true
@@ -83,7 +79,7 @@
             shareConfig: {
               singleton: true,
               requiredVersion: "^1.0.0",
-              
+              import: false,
             }
           }
         ,
@@ -94,7 +90,7 @@
             loaded: false,
             from: "mfe_banner",
             async get () {
-              if (false) {
+              if (true) {
                 throw new Error(`Shared module '${"react"}' must be provided by host`);
               }
               usedShared["react"].loaded = true
@@ -113,7 +109,7 @@
             shareConfig: {
               singleton: true,
               requiredVersion: "^19.2.0",
-              
+              import: false,
             }
           }
         ,
@@ -124,7 +120,7 @@
             loaded: false,
             from: "mfe_banner",
             async get () {
-              if (false) {
+              if (true) {
                 throw new Error(`Shared module '${"react-dom"}' must be provided by host`);
               }
               usedShared["react-dom"].loaded = true
@@ -143,7 +139,7 @@
             shareConfig: {
               singleton: true,
               requiredVersion: "^19.2.0",
-              
+              import: false,
             }
           }
         
