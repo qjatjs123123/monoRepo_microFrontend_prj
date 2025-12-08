@@ -32,7 +32,7 @@ jobs:
 
       # 5. header 앱 빌드
       - name: Build Header App
-        run: pnpm --filter apps/header run build
+        run: pnpm --filter header run build
 
       # 6. S3 업로드
       - name: Upload Header App to S3
