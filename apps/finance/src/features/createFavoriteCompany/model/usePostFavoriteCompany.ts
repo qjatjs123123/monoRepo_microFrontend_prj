@@ -5,11 +5,12 @@ import { postFavorite } from "../api/post-favorite";
 // import { useToastService } from "@/shared/ui/Toast/model/useToastService";
 import type { AxiosError } from "@/shared/model/AxiosError";
 import { useGetFavoriteList } from "@/entities";
-import { useCheckContext } from "../../checkFavoriteCompany";
+// import { useCheckContext } from "../../checkFavoriteCompany";
 
 export function usePostFavoriteCompany() {
   const { getValues } = useFormContext<FavoriteCompanyFormProps>();
   // const { show } = useToastService();
+  const queryClient = useQueryClient();
   const show = (a: string) => {}
   const { refetch } = useGetFavoriteList();
   
@@ -21,6 +22,9 @@ export function usePostFavoriteCompany() {
       return res.message;
     },
     onSuccess: (message) => {
+      queryClient.invalidateQueries({
+        queryKey: ["favorite"],
+      });
       refetch();
       show(message);
     },
