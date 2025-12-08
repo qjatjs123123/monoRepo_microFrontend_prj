@@ -39,12 +39,12 @@ export default defineConfig({
         mfe_finance: {
           type: "module",
           name: "mfe_finance",
-          entry: "https://pwc-fin.netlify.app/remoteEntry.js",
+          entry: "https://d2khml1veaagc6.cloudfront.net/pwc/finance/remoteEntry.js",
         },
         mfe_viewer: {
           type: "module",
           name: "mfe_viewer",
-          entry: "https://pwc-viewer.netlify.app/remoteEntry.js",
+          entry: "https://d2khml1veaagc6.cloudfront.net/pwc/viewer/remoteEntry.js",
         },
       },
 

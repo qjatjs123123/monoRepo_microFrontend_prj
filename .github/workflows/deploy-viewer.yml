@@ -1,0 +1,64 @@
+name: Deploy viewer to S3
+
+# path 변경 여부 확인되면 이 workflow 실행한다
+on:
+  push:
+    paths:
+      - "apps/viewer/**" # header 앱 디렉터리 변경여부 체크
+      - ".github/workflows/deploy-viewer.yml"
+
+# 워크플로우의 작업 단위
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 우분투 환경에서 실행한다.
+
+    steps:
+      # 1. 코드 체크아웃 리포지토리 코드를 vm으로 가져오는 단계
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Node.js 25.1.0 수동 설치
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 'latest'
+
+      # 3. pnpm 설치
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # 4. 의존성 설치 (pnpm workspace)
+      - name: Install dependencies
+        run: pnpm install
+
+      # 1. packages/* 빌드 (ui, core 등)
+      - name: Build shared packages
+        run: pnpm --filter "./packages/*" run build
+
+      # 5. viewer 앱 빌드
+      - name: Build viewer App
+        run: pnpm --filter viewer run build
+
+      # 6. S3 업로드
+      - name: Upload viewer App to S3
+        run: |
+          aws s3 sync apps/viewer/dist s3://hongboemsunimage/pwc/viewer \
+            --delete \
+            --acl public-read \
+            --cache-control "max-age=31536000"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+
+      # 7. CloudFront 캐시 무효화
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id $CLOUDFRONT_DIST_ID \
+            --paths "/*"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          CLOUDFRONT_DIST_ID: ${{ secrets.CLOUDFRONT_DIST_ID }}
