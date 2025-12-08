@@ -7,6 +7,8 @@ import {
 } from "@monorepo/ui";
 import { Text } from "@monorepo/ui";
 import { TextArea } from "@monorepo/ui";
+import { Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 import { Controller, useFormContext } from "react-hook-form";
 
 export function ModalBody() {
@@ -45,13 +47,17 @@ export function ModalBody() {
             </SearchDropDown.Input>
             <SearchDropDown.Dropdown>
               {({ setShowList, isExist, setIsExist }) => (
-                <DropDown
-                  value={field.value}
-                  onChange={field.onChange}
-                  setShowList={setShowList}
-                  isExist={isExist}
-                  setIsExist={setIsExist}
-                />
+                <ErrorBoundary fallback={<></>}>
+                  <Suspense fallback={<></>}>
+                    <DropDown
+                      value={field.value}
+                      onChange={field.onChange}
+                      setShowList={setShowList}
+                      isExist={isExist}
+                      setIsExist={setIsExist}
+                    />
+                  </Suspense>
+                </ErrorBoundary>
               )}
             </SearchDropDown.Dropdown>
           </SearchDropDown>

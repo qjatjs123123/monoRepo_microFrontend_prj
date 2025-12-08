@@ -13,7 +13,7 @@ export function ViewerForm() {
       <ReprtCodeInput />
       <FsDivInput />
       <div className="flex justify-center pb-[30px]">
-        <ErrorBoundary fallback={<>111</>}>
+        <ErrorBoundary fallback={<></>}>
           <SubmitButton />
         </ErrorBoundary>
       </div>
