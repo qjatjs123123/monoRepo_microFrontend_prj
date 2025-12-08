@@ -1,5 +1,6 @@
 import { Text } from "@monorepo/ui";
 import { useCheckContext } from "@/features/checkFavoriteCompany";
+import Close from "@monorepo/ui/public/close.png";
 
 export function ModalBody() {
   const { checkedIds } = useCheckContext();
@@ -7,7 +8,7 @@ export function ModalBody() {
 
   return (
     <>
-      <img src="/close.png" width={80} height={80} alt="close" />
+      <img src={Close} width={80} height={80} alt="close" />
 
       <Text type="title" weight="bold" size="3">
         총 {count}개를 삭제하시겠습니까?

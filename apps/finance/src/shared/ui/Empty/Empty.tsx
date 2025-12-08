@@ -1,10 +1,11 @@
 import { ErrorMessage } from "@monorepo/ui";
 import { Text } from "@monorepo/ui";
+import Box from "@monorepo/ui/public/box.webp";
 
 export function Empty() {
   return (
     <ErrorMessage
-      src="/empty-box.webp"
+      src={Box}
       title="비어있어요"
       description={
         <div className="flex flex-col">

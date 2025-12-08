@@ -21,3 +21,4 @@ export { Text } from "./Text/Text";
 export { TextArea } from "./TextArea/TextArea";
 export { Input } from "./Input/Input";
 export { SearchDropDown } from "./SearchDropDown/SearchDropDown";
+export { Toast } from "./Toast/Toast";

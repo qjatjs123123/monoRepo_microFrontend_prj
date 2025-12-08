@@ -3,10 +3,9 @@ import {
   PortalProvider,
   TanStackProvider,
 } from "@monorepo/core";
-import { TableEntry } from "@/widgets";
 import { BrowserRouter } from "react-router-dom";
-import { Layout } from "@monorepo/ui";
 import "../global.css";
+import { Page } from "@/pages/page";
 
 export default function App() {
   return (
@@ -14,9 +13,7 @@ export default function App() {
       <BrowserRouter>
         <PortalProvider>
           <OverlayProvider>
-            <Layout>
-              <TableEntry page="1" />
-            </Layout>
+            <Page />
           </OverlayProvider>
         </PortalProvider>
       </BrowserRouter>

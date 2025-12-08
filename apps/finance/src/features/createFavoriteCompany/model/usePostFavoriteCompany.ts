@@ -2,18 +2,15 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import type { FavoriteCompanyFormProps } from "./favorite-company-form";
 import { useFormContext } from "react-hook-form";
 import { postFavorite } from "../api/post-favorite";
-// import { useToastService } from "@/shared/ui/Toast/model/useToastService";
+import { setToast } from "@monorepo/core";
 import type { AxiosError } from "@/shared/model/AxiosError";
 import { useGetFavoriteList } from "@/entities";
-// import { useCheckContext } from "../../checkFavoriteCompany";
 
 export function usePostFavoriteCompany() {
   const { getValues } = useFormContext<FavoriteCompanyFormProps>();
-  // const { show } = useToastService();
   const queryClient = useQueryClient();
-  const show = (a: string) => {}
   const { refetch } = useGetFavoriteList();
-  
+
   const mutation = useMutation({
     mutationFn: async () => {
       const data = getValues();
@@ -26,10 +23,10 @@ export function usePostFavoriteCompany() {
         queryKey: ["favorite"],
       });
       refetch();
-      show(message);
+      setToast(message);
     },
     onError: (error: AxiosError) => {
-      show(error.message);
+      setToast(error.message);
     },
     retry: 0,
   });

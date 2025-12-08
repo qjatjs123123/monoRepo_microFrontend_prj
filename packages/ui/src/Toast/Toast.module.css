@@ -1,0 +1,21 @@
+.toastWrapper {
+  position: fixed;
+  bottom: 2rem;     /* bottom-8 */
+  left: 50%;        /* left-1/2 */
+  transform: translateX(-50%); /* wrapper에서만 translateX 처리 */
+  z-index: 50;
+  pointer-events: none; /* 옵션: 클릭 이벤트를 막고 싶으면 */
+}
+
+/* motion에서 transform을 제어하므로 여기서는 transform 사용 금지 */
+.toast {
+  pointer-events: auto; /* wrapper가 none이면 버튼 등 클릭 가능하게 하려면 auto */
+  background-color: black;
+  color: white;
+  padding: 1.25rem 1.5rem;
+  border-radius: 4px;
+  box-shadow:
+    0 10px 15px -3px rgba(0,0,0,0.1),
+    0 4px 6px -4px rgba(0,0,0,0.1);
+  font-size: 0.875rem;
+}

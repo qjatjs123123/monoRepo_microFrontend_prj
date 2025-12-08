@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-// import { useToastService } from "@/shared/ui/Toast/model/useToastService";
+import { setToast } from "@monorepo/core";
 import { AxiosError } from "axios";
 import { EMAIL } from "@/shared/config/constants/constants";
 import { updateFavorite } from "../api/update-favorite";
@@ -8,8 +8,6 @@ import type { UpdateModalForm } from "./update-favorite";
 import { useOverlay } from "@monorepo/core";
 
 export function useUpdateFavoriteCompany() {
-  // const { show } = useToastService();
-  const show = (a) => {}
   const { getValues } = useFormContext<UpdateModalForm>();
   const { close } = useOverlay();
   const queryClient = useQueryClient();
@@ -24,7 +22,7 @@ export function useUpdateFavoriteCompany() {
     },
 
     onSuccess: (message, updateId) => {
-      show(message);
+      setToast(message);
       close();
       queryClient.invalidateQueries({
         queryKey: ["favorite-detail", updateId],
@@ -33,7 +31,7 @@ export function useUpdateFavoriteCompany() {
     },
 
     onError: (error: AxiosError) => {
-      show(error.message);
+      setToast(error.message);
     },
     retry: 0,
   });

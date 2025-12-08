@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
-    "@monorepo/tailwind-config": "workspace:*"
-
+    "@monorepo/tailwind-config": "workspace:*",
+    "framer-motion": "^12.23.24"
   },
   "peerDependencies": {
     "react": ">=18.0.0",

@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { deleteFavorite } from "../api/delete-favorite";
-// import { useToastService } from "@/shared/ui/Toast/model/useToastService";
+import { setToast } from "@monorepo/core";
 import { AxiosError } from "axios";
 import { EMAIL } from "@/shared/config/constants/constants";
 import { useOverlay } from "@monorepo/core";
@@ -8,8 +8,6 @@ import { useGetFavoriteList } from "@/entities";
 import { useCheckContext } from "../../checkFavoriteCompany";
 
 export function useDeleteFavoriteCompanyList() {
-  // const { show } = useToastService();
-  const show = (a: string) => {}
   const { close } = useOverlay();
   const { refetch } = useGetFavoriteList();
   const { checkedIds, setCheckedIds } = useCheckContext();
@@ -28,12 +26,12 @@ export function useDeleteFavoriteCompanyList() {
     },
     onSuccess: (message) => {
       close();
-      show(message);
+      setToast(message);
       refetch();
       setCheckedIds([]);
     },
     onError: (error: AxiosError) => {
-      show(error.message);
+      setToast(error.message);
     },
     retry: 0,
   });
