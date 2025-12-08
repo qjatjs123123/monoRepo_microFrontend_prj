@@ -41,7 +41,7 @@ jobs:
       # 6. S3 업로드
       - name: Upload Header App to S3
         run: |
-          aws s3 sync apps/header/dist s3://hongboemsunimage/pwc \
+          aws s3 sync apps/header/dist s3://hongboemsunimage/pwc/header \
             --delete \
             --acl public-read \
             --cache-control "max-age=31536000"

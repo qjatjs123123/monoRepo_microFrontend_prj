@@ -29,7 +29,7 @@ export default defineConfig({
         mfe_header: {
           type: "module",
           name: "mfe_header",
-          entry: "https://pwc-header.netlify.app/remoteEntry.js",
+          entry: "https://d2khml1veaagc6.cloudfront.net/pwc/header/remoteEntry.js",
         },
         mfe_banner: {
           type: "module",
