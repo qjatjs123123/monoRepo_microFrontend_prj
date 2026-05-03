@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState, ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 
 export function MSWProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
