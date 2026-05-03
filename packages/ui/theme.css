@@ -57,5 +57,5 @@
   --font-weight-bold: var(--font-weight-bold);
 
   /* Font family */
-  --font-body: var(--font-family-body);
+  --font-family: var(--font-family-body);
 }

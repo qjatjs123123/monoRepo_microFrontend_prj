@@ -45,9 +45,6 @@ importers:
       '@monorepo/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@monorepo/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/tailwind-config
       '@monorepo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -118,9 +115,6 @@ importers:
       '@monorepo/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@monorepo/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/tailwind-config
       '@monorepo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -206,9 +200,6 @@ importers:
       '@monorepo/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@monorepo/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/tailwind-config
       '@monorepo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -316,9 +307,6 @@ importers:
       '@monorepo/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@monorepo/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/tailwind-config
       '@monorepo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -453,9 +441,6 @@ importers:
       '@monorepo/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@monorepo/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/tailwind-config
       '@monorepo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -552,16 +537,11 @@ importers:
         specifier: ^5.9.0
         version: 5.9.3
 
-  packages/tailwind-config: {}
-
   packages/ui:
     dependencies:
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.2.7)(react@19.2.0)
-      '@monorepo/tailwind-config':
-        specifier: workspace:*
-        version: link:../tailwind-config
       framer-motion:
         specifier: ^12.23.24
         version: 12.23.25(react-dom@19.2.0(react@19.2.0))(react@19.2.0)

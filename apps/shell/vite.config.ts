@@ -57,7 +57,6 @@ export default defineConfig({
         "react-dom": { singleton: true, strictVersion: true },
         "@monorepo/ui": { singleton: true, strictVersion: false },
         "@monorepo/core": { singleton: true, strictVersion: false },
-        "@monorepo/tailwind-config": { singleton: true, strictVersion: false },
         "react-router-dom": { singleton: true, requiredVersion: "6.16.0" },
         "@tanstack/react-query": {
           singleton: true,

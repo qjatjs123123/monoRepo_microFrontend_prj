@@ -20,7 +20,6 @@ export default defineConfig({
         "react-dom": { singleton: true, strictVersion: true, import: false  },
         "@monorepo/ui": { singleton: true, strictVersion: false, import: false  },
         "@monorepo/core": { singleton: true, strictVersion: false, import: false  },
-        "@monorepo/tailwind-config": { singleton: true, strictVersion: false, import: false  },
         "react-router-dom": { singleton: true, requiredVersion: "6.16.0", import: false },
       },
     }),

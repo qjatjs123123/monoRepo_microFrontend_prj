@@ -44,11 +44,6 @@ export default defineConfig({
           strictVersion: false,
           import: false,
         },
-        "@monorepo/tailwind-config": {
-          singleton: true,
-          strictVersion: false,
-          import: false,
-        },
         "@tanstack/react-query": {
           singleton: true,
           strictVersion: true, // 버전이 다르면 에러 → 권장

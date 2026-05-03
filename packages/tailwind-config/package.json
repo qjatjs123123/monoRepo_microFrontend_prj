@@ -1,7 +1,0 @@
-{
-  "name": "@monorepo/tailwind-config",
-  "version": "0.0.1",
-  "private": false,
-  "files": ["theme.css", "tokens.css"],
-  "main": "index.ts"
-}
