@@ -1,0 +1,47 @@
+name: Build Figma Tokens
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/ui/global.json"
+      - "packages/ui/light.json"
+      - "packages/ui/dark.json"
+
+jobs:
+  build-tokens:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 'latest'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build tokens
+        run: pnpm --filter @monorepo/ui tokens:build
+
+      - name: Commit built CSS
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add packages/ui/build/global/_variables.css
+          git add packages/ui/build/light/_variables.css
+          git add packages/ui/build/dark/_variables.css
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "chore: build tokens [skip ci]"
+          git push

@@ -30,6 +30,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      # 5. 디자인 토큰 CSS 빌드 (style-dictionary)
+      - name: Build design tokens
+        run: pnpm --filter @monorepo/ui tokens:build
+
       # 1. packages/* 빌드 (ui, core 등)
       - name: Build shared packages
         run: pnpm --filter "./packages/*" run build

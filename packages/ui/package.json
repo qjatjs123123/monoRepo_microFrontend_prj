@@ -7,7 +7,11 @@
     "build": "vite build",
     "dev": "vite",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "tokens:build:global": "style-dictionary build --config config.global.json",
+    "tokens:build:light": "style-dictionary build --config config.light.json",
+    "tokens:build:dark": "style-dictionary build --config config.dark.json",
+    "tokens:build": "pnpm tokens:build:global && pnpm tokens:build:light && pnpm tokens:build:dark"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -19,6 +23,7 @@
     "react-dom": ">=18.0.0"
   },
   "devDependencies": {
+    "style-dictionary": "^5.1.1",
     "@storybook/addon-essentials": "^8.6.12",
     "@storybook/react": "^8.6.12",
     "@storybook/react-vite": "^8.6.12",
