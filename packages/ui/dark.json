@@ -107,6 +107,10 @@
     "placeholder": {
       "value": "#7F7F82",
       "type": "color"
+    },
+    "placeholder1": {
+      "value": "#7F7F82",
+      "type": "color"
     }
   }
 }
