@@ -3,12 +3,11 @@ import { http, HttpResponse } from "msw";
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
 export const favoritesHandler = [
-  http.get(`${baseUrl}/favorites`, ({ request }) => {
+  http.get(`http://localhost:3000/favorites`, ({ request }) => {
     const url = new URL(request.url);
     const email = url.searchParams.get("email");
     const page = Number(url.searchParams.get("page") || "1");
     const pageSize = 11;
-
     // 이메일 없으면 400
     // return HttpResponse.json({}, { status: 400 });
     const allItems = [

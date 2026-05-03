@@ -2,7 +2,7 @@ import axios, { AxiosError, type AxiosResponse } from 'axios';
 
 const api = axios.create({
   // baseURL: import.meta.env.VITE_API_BASE_URL,
-  baseURL: '/api',
+  // baseURL: '/api',
   timeout: 5000,
 });
 

@@ -6,17 +6,21 @@ import {
 import { BrowserRouter } from "react-router-dom";
 import "../global.css";
 import { Page } from "@/pages/page";
+import { MSWProvider } from "./MSWProvider";
+
 
 export default function App() {
   return (
-    <TanStackProvider>
-      <BrowserRouter>
-        <PortalProvider>
-          <OverlayProvider>
-            <Page />
-          </OverlayProvider>
-        </PortalProvider>
-      </BrowserRouter>
-    </TanStackProvider>
+    <MSWProvider>
+      <TanStackProvider>
+        <BrowserRouter>
+          <PortalProvider>
+            <OverlayProvider>
+              <Page />
+            </OverlayProvider>
+          </PortalProvider>
+        </BrowserRouter>
+      </TanStackProvider>
+    </MSWProvider>
   );
 }
