@@ -1,0 +1,112 @@
+{
+  "color": {
+    "primary": {
+      "value": "#ffffff",
+      "type": "color"
+    },
+    "background": {
+      "default": {
+        "value": "#0d0e0e",
+        "type": "color"
+      },
+      "alt": {
+        "value": "#23272e",
+        "type": "color"
+      },
+      "modal": {
+        "value": "#333333",
+        "type": "color"
+      },
+      "alternative": {
+        "value": "#1a1a1a",
+        "type": "color"
+      }
+    },
+    "componentDark": {
+      "value": "#f9fafb",
+      "type": "color"
+    },
+    "text": {
+      "100": {
+        "value": "#f3f4f6",
+        "type": "color"
+      }
+    },
+    "secondary": {
+      "300": {
+        "value": "#e0e0e0",
+        "type": "color"
+      },
+      "400": {
+        "value": "#cccccc",
+        "type": "color"
+      },
+      "600": {
+        "value": "#aaaaaa",
+        "type": "color"
+      }
+    },
+    "checked": {
+      "value": "#ff8700",
+      "type": "color"
+    },
+    "checked300": {
+      "value": "#3d2800",
+      "type": "color"
+    },
+    "label": {
+      "100": {
+        "value": "#1a1a1a",
+        "type": "color"
+      },
+      "200": {
+        "value": "#222222",
+        "type": "color"
+      },
+      "500": {
+        "value": "#7F7F82",
+        "type": "color"
+      },
+      "700": {
+        "value": "#9ca3af",
+        "type": "color"
+      },
+      "800": {
+        "value": "#f3f4f6",
+        "type": "color"
+      },
+      "900": {
+        "value": "#ffffff",
+        "type": "color"
+      }
+    },
+    "statusDisable": {
+      "value": "#334155",
+      "type": "color"
+    },
+    "line": {
+      "200": {
+        "value": "#222222",
+        "type": "color"
+      },
+      "400": {
+        "value": "#3E3E3E",
+        "type": "color"
+      }
+    }
+  },
+  "input": {
+    "color": {
+      "value": "#ffb27f",
+      "type": "color"
+    },
+    "colorHover": {
+      "value": "#1a1a1a",
+      "type": "color"
+    },
+    "placeholder": {
+      "value": "#7F7F82",
+      "type": "color"
+    }
+  }
+}

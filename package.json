@@ -8,7 +8,11 @@
     "dev:banner": "pnpm --filter ./apps/banner dev",
     "dev:header": "pnpm --filter header dev",
     "dev:shell": "pnpm --filter ./apps/shell dev",
-    "dev": "run-s dev:banner dev:header dev:shell"
+    "dev": "run-s dev:banner dev:header dev:shell",
+    "tokens:build:global": "style-dictionary build --config config.global.json",
+    "tokens:build:light": "style-dictionary build --config config.light.json",
+    "tokens:build:dark": "style-dictionary build --config config.dark.json",
+    "tokens:build": "pnpm tokens:build:global && pnpm tokens:build:light && pnpm tokens:build:dark"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +24,7 @@
     "classnames": "^2.5.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "style-dictionary": "^5.1.1",
     "zustand": "^5.0.9"
   },
   "devDependencies": {

@@ -1,0 +1,112 @@
+{
+  "color": {
+    "primary": {
+      "value": "#000000",
+      "type": "color"
+    },
+    "background": {
+      "default": {
+        "value": "#ffffff",
+        "type": "color"
+      },
+      "alt": {
+        "value": "#f5f6fa",
+        "type": "color"
+      },
+      "modal": {
+        "value": "#acacae",
+        "type": "color"
+      },
+      "alternative": {
+        "value": "#f3f4f6",
+        "type": "color"
+      }
+    },
+    "componentDark": {
+      "value": "#23272e",
+      "type": "color"
+    },
+    "text": {
+      "100": {
+        "value": "#3E3E3E",
+        "type": "color"
+      }
+    },
+    "secondary": {
+      "300": {
+        "value": "#333333",
+        "type": "color"
+      },
+      "400": {
+        "value": "#222222",
+        "type": "color"
+      },
+      "600": {
+        "value": "#1a1a1a",
+        "type": "color"
+      }
+    },
+    "checked": {
+      "value": "#ff8700",
+      "type": "color"
+    },
+    "checked300": {
+      "value": "#fff7e0",
+      "type": "color"
+    },
+    "label": {
+      "100": {
+        "value": "#f9fafb",
+        "type": "color"
+      },
+      "200": {
+        "value": "#f3f4f6",
+        "type": "color"
+      },
+      "500": {
+        "value": "#9ca3af",
+        "type": "color"
+      },
+      "700": {
+        "value": "#7F7F82",
+        "type": "color"
+      },
+      "800": {
+        "value": "#3E3E3E",
+        "type": "color"
+      },
+      "900": {
+        "value": "#0d0e0e",
+        "type": "color"
+      }
+    },
+    "statusDisable": {
+      "value": "#cbd5e1",
+      "type": "color"
+    },
+    "line": {
+      "200": {
+        "value": "#f3f4f6",
+        "type": "color"
+      },
+      "400": {
+        "value": "#ced2d6",
+        "type": "color"
+      }
+    }
+  },
+  "input": {
+    "color": {
+      "value": "#ffb27f",
+      "type": "color"
+    },
+    "colorHover": {
+      "value": "#f3f4f6",
+      "type": "color"
+    },
+    "placeholder": {
+      "value": "#aaaaaa",
+      "type": "color"
+    }
+  }
+}
